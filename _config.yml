@@ -29,7 +29,7 @@ avatar: "/img/avatar-icon.png"
 navbar-links:
   Home: ""
   About Me: "aboutme"
-  Author's home: 
+ # Author's home: 
   
 # --- Footer options --- #
 
@@ -41,8 +41,8 @@ author:
   facebook:  # eg. daattali
   github: rikola    # eg. daattali
   twitter:    # eg. daattali
-  linkedin:   # eg. "pub/dean-attali/8/946/143"
-  stackoverflow:   # eg. "3943160/daattali"
+  linkedin: eric-koehler-237640111
+  stackoverflow: "4317818/rikola"
  
 # Select which links to show in the footer
 footer-links-active:
