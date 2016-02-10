@@ -9,8 +9,8 @@ I recently started working with the EZAudio framework for iOS. I am using it in 
 First off, I assumed that by including EZAudio in the `Podfile` I would be able to grab the latest version with a pod update. I was wrong.  
 
 Here was my original podfile,
-```
-# platform :ios, '8.0'
+
+```# platform :ios, '8.0'
 use_frameworks!
 
 target 'Nervana' do
