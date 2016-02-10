@@ -10,18 +10,18 @@ First off, I assumed that by including EZAudio in the `Podfile` I would be able 
 
 Here was my original podfile,
 
-```
-	# platform :ios, '8.0'
-	use_frameworks!
+```  
+# platform :ios, '8.0'
+use_frameworks!
 
-	target 'Nervana' do
-		
-		pod 'SWRevealViewController'
-		pod 'TPCircularBuffer'
-		pod 'EZAudio'
-		pod 'KAProgressLabel'
-		
-	end
+target 'Nervana' do
+	
+	pod 'SWRevealViewController'
+	pod 'TPCircularBuffer'
+	pod 'EZAudio'
+	pod 'KAProgressLabel'
+	
+end  
 ```
 
 For some reason, this was downloading the version `0.2.0` and not moving up to version `1.5.2`.
