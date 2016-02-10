@@ -37,11 +37,11 @@ navbar-links:
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Eric Koehler
-  email: "rikola@gmail.com"
+  email: "koehleree@gmail.com"
   facebook:  # eg. daattali
   github: rikola    # eg. daattali
   twitter:    # eg. daattali
-  linkedin: eric-koehler-237640111
+  linkedin: "eric-koehler-237640111"
   stackoverflow: "4317818/rikola"
  
 # Select which links to show in the footer
