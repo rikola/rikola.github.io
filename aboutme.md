@@ -1,13 +1,11 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Developer/Student
 ---
 
-My name is Eric Koehler
+My name is Eric Koehler. I am a student at Vanderbilt University and I love making software. 
 
-I make things
+### My Projects
 
-### my history
-
-I love Eastbound and Down.
+I am currently working on ![Nervana](www.experiencenervana.com), a cutting edge neurostimulation device that just premiered at CES 2016.
