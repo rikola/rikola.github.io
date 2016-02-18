@@ -32,6 +32,7 @@ What you'll need:
 First we need to lay the necessary foundation before we start playing music. It makes for cleaner code if we encapsulate the playlist functionality into its own object. Make a new empty swift file called `Playlist.swift`. Make the starting frame of the class.  
 
 ~~~ swift
+// Playlist.swift
 import Foundation
 import AVFoundation
 import MediaPlayer

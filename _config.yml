@@ -29,6 +29,7 @@ avatar: "/img/tire-fire.png"
 navbar-links:
   Home: ""
   About Me: "aboutme"
+  EKAudioPlayer: "EKAudioPlayer"
  # Author's home: 
   
 # --- Footer options --- #
