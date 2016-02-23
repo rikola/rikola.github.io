@@ -64,12 +64,51 @@ This makes for cleaner looking code when the closure content is large, like they
 
 #### Basic UIKit Animations
 
-abc
+It's easy as crap:
+
+``` swift
+UIView.animateWithDuration(5.0) {
+	// Whatever you want to animate
+}
+```
+
+`animateWithDuration(_:_:)` does all the heavy lifting here.
+
+Now we can start animating stuff.
+
+Open `ViewController.swift` and find `func animate()`. Change it to the following:
+
+``` swift
+func animate() {
+	UIView.animateWithDuration(2.0) {
+		self.someview.center.x += 10
+	}
+}
+```
+
+Now run the app, press the button and bask in how much you just improved this app.
+
+Now that we have animated a `UIView` position, we can check out some of the other UIKit animation functions.
+
+
 
 
 #### Animatable Properties
 
-abc
+As you can imagine, not every single property of views is animatable. As a general rule of thumb, view properties that are both settable and numerical can be animated.  
+
+The following properties of UIView are animatable:
+
+Property          | Description
+----------------- | -----------
+`frame`           | Location & size in parent container
+`bounds`          | Area that the view can draw content
+`center`          | Center point of the `frame`
+`transform`       | Used for spinning or warping
+`alpha`           | Transparency
+`backgroundColor` | Color behind the view's content
+`contentStretch`  | How the content resizes itself
+
 
 --- 
 
