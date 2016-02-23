@@ -99,16 +99,17 @@ As you can imagine, not every single property of views is animatable. As a gener
 
 The following properties of UIView are animatable:
 
-Property          | Description
------------------ | -----------
-`frame`           | Location & size in parent container
-`bounds`          | Area that the view can draw content
-`center`          | Center point of the `frame`
-`transform`       | Used for spinning or warping
-`alpha`           | Transparency
-`backgroundColor` | Color behind the view's content
-`contentStretch`  | How the content resizes itself
-
+|-------------------+-------------------------------------|
+| Property          | Description                         |
+|-------------------|-------------------------------------|
+| `frame`           | Location & size in parent container |
+| `bounds`          | Area that the view can draw content |
+| `center`          | Center point of the `frame`         |
+| `transform`       | Used for spinning or warping        |
+| `alpha`           | Transparency                        |
+| `backgroundColor` | Color behind the view's content     | 
+| `contentStretch`  | How the content resizes itself      |
+|-------------------+-------------------------------------|
 
 --- 
 
