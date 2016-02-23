@@ -12,13 +12,64 @@ subtitle: Start using animations in your apps.
 
 1. Clone or download the starter project repo from [DL LINK HERE](example.com).  
 
+---
+
+## First – Some Closure
+  
+Most Computer Science majors are familiar with these as __blocks__ (Obj-C) or __lambdas__ (everything else), but to casual coders they can be scary.  
+
+A closure is something called an **Anonymous Function**.
+
+Normally when you have a function in Swift it looks like this:
+
+``` swift
+func sum(a: Int, b: Int) -> Int {  
+	return a + b
+}
+```
+Closures on the other hand do not have a function name (anonymous) or parameter names. This is identical to the previous sum function:  
+
+``` swift  
+{ (item1: Int, item2: Int) -> Int in  
+	return item1 + item2 
+}  
+```
+
+However, this session will be generally using closures with no parameters. If your closure does not take any parameters and does not need to return a value, such as with a completion handler function, you may omit the parameters and return declaration:
+
+``` swift  
+{ // Do something here }
+```
+
+Finally, if a function takes a closure as its final argument, generally as a completion handler, Swift allows the closure braces to be put outside the function call:  
+
+``` swift
+// Normal way to do it
+functionThatTakesAClosure({
+    // closure's body goes here
+})
+ 
+// Now with a trailing closure
+functionThatTakesAClosure() {
+    // trailing closure's body goes here
+}
+```
+
+This makes for cleaner looking code when the closure content is large, like they will be with our animations.  
+
+
 ---  
 
 ## Getting Started
 
 #### Basic UIKit Animations
 
+abc
+
+
 #### Animatable Properties
+
+abc
 
 --- 
 
@@ -26,19 +77,29 @@ subtitle: Start using animations in your apps.
 
 #### User Interacton Animations
 
+abc
+
 ---
 
 ## Transitions
 
 #### Crossfade
 
-#### Cube
+abc
+
+#### Cube Simulation
+
+abc
 
 #### Fade
+
+abc
 
 ---
 
 ## Keyframes
+
+abc
 
 
 ---
@@ -47,11 +108,16 @@ subtitle: Start using animations in your apps.
 
 #### Programatic Constraints
 
+abc
+
 #### IB Constraints
+
+abc
 
 
 
 ---
+
 Follow me on Github: [@rikola](https://github.com/rikola)  
 
 
