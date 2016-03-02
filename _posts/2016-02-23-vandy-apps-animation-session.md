@@ -10,7 +10,7 @@ subtitle: Start using animations in your apps.
 
 ### Set up
 
-1. Clone or download the starter project repo from [DL LINK HERE](example.com).  
+1. Clone or download the starter project repo from [Github](https://github.com/rikola/ios-animation-session).
 
 ---
 
@@ -90,6 +90,27 @@ Now run the app, press the button and bask in how much you just improved this ap
 
 Now that we have animated a `UIView` position, we can check out some of the other UIKit animation functions.
 
+#### Taking basic UIKit animations further
+
+You can do more customized animations with another version of `animateWithDuration:`. 
+
+``` swift
+UIView.animateWithDuration(0.5, delay: 0.4, options: [], animations: { 
+	self.password.center.x += self.view.bounds.width
+}, completion: nil)
+```  
+
+The `options` parameter allows you to customize certain properties about the animation. Some options you can pass in are:
+
+* `.Repeat` – Makes the animation repeat over and over again.
+* `.Autoreverse` – Causes the animation to reverse itself during the last half of the animation. Handy for making UI elements pop out and then go back to normal size. 
+
+Another use for the `options` parameter is to pass in animation easing options. These control the animation speed curve. The default is `.EaseInOut` which brings the animation to a start and stop slowly like a real object. You can use these strategically to make your animations look less robotic. Some common easing options are:  
+
+* `.Linear` – Robot mode. No easing on either end.
+* `.CurveEaseInOut` – Easing on both ends.
+* `.CurveEaseIn` – Easing only at the beginning.
+* `.CurveEaseOut` – Easing only at the end.
 
 
 
@@ -111,25 +132,23 @@ The following properties of UIView are animatable:
 | `contentStretch`  | How the content resizes itself      |
 |-------------------+-------------------------------------|
 
-|---
-| Default aligned | Left aligned | Center aligned | Right aligned
-|-|:-|:-:|-:
-| First body part | Second cell | Third cell | fourth cell
-| Second line |foo | **strong** | baz
-| Third line |quux | baz | bar
-|---
-| Second body
-| 2 line
-|===
-| Footer row
 
 --- 
 
 ## Spring Animations
 
+Spring animations make a cool effect of having something bounce with semi-realistic physics. They are useful for making your UI look a lot more goofy, and are particularly useful for making games and apps geared towards children or simple people. Heres an example:
+
+``` swift
+UIView.animateWithDuration(0.5, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [], animations: {
+	self.loginButton.center.y -= 30.0
+	self.loginButton.alpha = 1.0 
+}, completion: nil)
+```
+
 #### User Interacton Animations
 
-abc
+Now that we know how to use some basic animation functions, adding them to UI elements such as buttons is going to be a piece of cake. All you have to do is add it to the button handler function. 
 
 ---
 
