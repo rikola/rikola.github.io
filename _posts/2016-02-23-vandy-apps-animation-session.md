@@ -146,7 +146,7 @@ UIView.animateWithDuration(0.5, delay: 0.5, usingSpringWithDamping: 0.5, initial
 }, completion: nil)
 ```
 
-#### User Interacton Animations
+#### User Interaction Animations
 
 Now that we know how to use some basic animation functions, adding them to UI elements such as buttons is going to be a piece of cake. All you have to do is add it to the button handler function. 
 
