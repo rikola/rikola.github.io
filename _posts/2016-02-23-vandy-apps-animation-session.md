@@ -150,40 +150,63 @@ UIView.animateWithDuration(0.5, delay: 0.5, usingSpringWithDamping: 0.5, initial
 
 Now that we know how to use some basic animation functions, adding them to UI elements such as buttons is going to be a piece of cake. All you have to do is add it to the button handler function. 
 
----
-
-## Transitions
-
-#### Crossfade
-
-abc
-
-#### Cube Simulation
-
-abc
-
-#### Fade
-
-abc
 
 ---
 
 ## Keyframes
 
-abc
+If you want to add multiple animations in a row with the method we just used, it would be pretty messy and look something like this.
 
+``` swift
+UIView.animateWithDuration(1.5, animations: {
+			self.someView.center += 50
+			}, completion: {
+				UIView.animateWithDuration(1.5, animations: {
+					self.someView.center += 50
+					}, completion: {
+						UIView.animateWithDuration(1.5, animations: {
+							self.someView.center += 50
+							}, completion: {
+								UIView.animateWithDuration(1.5, animations: {
+									self.someView.center += 50
+									}, completion: nil)
+						})
+				})
+		})
+```
 
----
+Instead of this mess we can use something called Keyframes.
 
-## Animating Constraints
+``` swift
+UIView.animateKeyframesWithDuration(2.0, delay: 0.0, options: [], animations: {
 
-#### Programatic Constraints
+	UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.25, animations: {
+		self.planeImage.center.x += 80.0
+		self.planeImage.center.y -= 10.0
+	})
 
-abc
+	UIView.addKeyframeWithRelativeStartTime(0.1, relativeDuration: 0.4) {
+		self.planeImage.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_4))
+	}
 
-#### IB Constraints
+	UIView.addKeyframeWithRelativeStartTime(0.25, relativeDuration: 0.25) {
+		self.planeImage.center.x += 100.0
+		self.planeImage.center.y -= 50.0
+		self.planeImage.alpha = 0.0
+	}
 
-abc
+	UIView.addKeyframeWithRelativeStartTime(0.51, relativeDuration: 0.01) {
+		self.planeImage.transform = CGAffineTransformIdentity
+		self.planeImage.center = CGPoint(x: 0.0, y: originalCenter.y)
+	}
+
+	UIView.addKeyframeWithRelativeStartTime(0.55, relativeDuration: 0.45) {
+		self.planeImage.alpha = 1.0
+		self.planeImage.center = originalCenter
+	}
+
+	}, completion: nil)
+```
 
 
 
